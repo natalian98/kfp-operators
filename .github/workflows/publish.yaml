@@ -24,8 +24,8 @@ jobs:
           - kfp-viz
     steps:
       - uses: actions/checkout@v2
-      # TODO: Update to @main when https://github.com/canonical/charmhub-upload-action/pull/1 merged
-      - uses: canonical/charmhub-upload-action@initial-implementation
+      # TODO: Update to v0.2.0 when available
+      - uses: canonical/charmhub-upload-action@branch/upload-charm-revisions
         with:
           credentials: ${{ secrets.CHARMCRAFT_CREDENTIALS }}
           charm-path: charms/${{ matrix.charm }}

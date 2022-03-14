@@ -53,7 +53,7 @@ async def test_build_and_deploy(ops_test: OpsTest):
         trust=True,
     )
 
-    # Maybe: await ops_test.model.wait_for_idle(raise_on_error=False, raise_on_blocked=True) ?
+    # raise_on_blocked=True can't be used as kfp-profile gets blocked till it finds minio versions
     await ops_test.model.wait_for_idle(status="active", timeout=60 * 10)
 
 

@@ -24,6 +24,7 @@ jobs:
         with:
           credentials: "${{ secrets.charmcraft-credentials }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+          charm-path: /charms/kfp-api
 
   lint:
     name: Lint
